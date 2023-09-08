@@ -1,9 +1,17 @@
 import { component$ } from '@builder.io/qwik';
 
-export default component$(() => {
-  return (
-    <main>
-      <h1>Won Games</h1>
-    </main>
-  );
-});
+export type MainProps = {
+  title: string;
+  description: string;
+};
+
+export default component$<MainProps>(
+  ({ title = 'Won Games', description = 'Purchase online games' }) => {
+    return (
+      <main>
+        <h1>{title}</h1>
+        <h2>{description}</h2>
+      </main>
+    );
+  }
+);
