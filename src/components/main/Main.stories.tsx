@@ -16,5 +16,4 @@ export const Primary: StoryObj<MainProps> = {
     title: 'Basic title',
     description: 'Basic description',
   },
-  // render: (props) => <Button {...props}>Some button</Button>,
 };

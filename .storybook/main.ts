@@ -1,6 +1,8 @@
 import { StorybookConfig } from 'storybook-framework-qwik';
+import { InlineConfig } from 'vite';
 
 const config: StorybookConfig = {
+  staticDirs: ['../public'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
 
   framework: {
@@ -9,14 +11,12 @@ const config: StorybookConfig = {
 
   core: {
     renderer: 'storybook-framework-qwik',
+    disableTelemetry: true,
   },
 
-  stories: [
-    '../src/components/**/*.stories.mdx',
-    '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
-  ],
+  stories: ['../src/components/**/*.stories.tsx'],
 
-  viteFinal: async (config: any) => {
+  viteFinal: async (config: InlineConfig) => {
     return config;
   },
 
