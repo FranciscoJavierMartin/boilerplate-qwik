@@ -4,5 +4,6 @@ module.exports = {
     // `pnpm run lint --fix . ${filenames.join(' --file')}`,
     `pnpm run lint --fix .`,
     `prettier --write ${filenames.join(' ')}`,
+    `pnpm test.unit`,
   ],
 };
