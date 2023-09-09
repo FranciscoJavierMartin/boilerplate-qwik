@@ -1,8 +1,5 @@
 import { Parameters } from 'storybook-framework-qwik';
-
 import { withThemeByClassName } from '@storybook/addon-styling';
-
-/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import '../src/global.css';
 
 export const parameters: Parameters = {
