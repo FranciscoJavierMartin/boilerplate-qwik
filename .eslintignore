@@ -38,3 +38,4 @@ yarn.lock
 server
 tailwind.config.js
 postcss.config.js
+generators/*
