@@ -3,7 +3,18 @@ import { InlineConfig } from 'vite';
 
 const config: StorybookConfig = {
   staticDirs: ['../public'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        postCss: {
+          implementation: require.resolve('postcss'),
+        },
+      },
+    },
+  ],
 
   framework: {
     name: 'storybook-framework-qwik',
